@@ -121,4 +121,4 @@ Here you can:
 
 ---
 
-Power by Developed by IT Team
+Developed by IT Team
