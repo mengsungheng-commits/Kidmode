@@ -1,124 +1,97 @@
-# Kids Mode – App Description & How to Use
+# Kids Mode – School Tablet Parental Control
 
-## App Description
+A lightweight **Kids Mode / Teacher Mode** app for Android phones and tablets (tested on HONOR).  
+Built for schools to limit student apps, control screen time, and give teachers a separate app list.
 
-**Kids Mode** is a parental control app for Android tablets. It gives children a simple, safe home screen with only the apps you allow, while parents keep full control with a PIN.
-
-**Main features**
-- Child-friendly home screen with large app icons  
-- Only approved apps are shown  
-- Parent PIN (4 digits) to open settings or exit  
-- Screen time limits  
-- Bedtime schedule  
-- App allow / block list  
-- Usage information  
-- School logo branding  
-- Optional use as default Home app  
-
-**Developed by IT Team**
+**Developed by IT Team · Footprints International School**
 
 ---
 
-## How to Use
+## Features
 
-### 1. First install
+### Kids Mode
+- Full-screen child-friendly home
+- Only **allowed student apps** are shown
+- Large icons, simple layout
+- Exit protected by PIN
+- Optional daily screen-time limit
+- Auto-return when student opens system **Settings** (needs Usage Access)
 
-1. Install the APK on the tablet.  
-2. Open **Kids Mode**.  
-3. Create a **4-digit Parent PIN** (type once).  
-4. You will enter **Parent Control**.
+### Teacher Mode
+- Separate home screen with **teacher-only apps**
+- Open from Kids Mode with **Teacher Mode PIN**
+- Return to Kids Mode **without** a PIN
+- Same Settings auto-return protection as Kids Mode
 
----
-
-### 2. Parent Control (Admin)
-
-Here you can:
-
-| Menu | What it does |
-|------|----------------|
-| **Screen Time** | Set daily limit (30 min, 1h, 2h, 3h, or Unlimited) |
-| **Manage Apps** | Choose which apps appear in Kids Mode (with icons and search) |
-| **Bedtime** | Set bedtime and wake-up time |
-| **Usage** | View today’s screen time and most-used apps |
-| **Settings** | Child name and permission links |
-| **Change PIN** | Change the 4-digit parent password |
-| **Child Profile** | Edit child name |
-| **Start Kids Mode** | Open the child home screen |
-| **Back to Home Screen** | Exit to the normal HONOR Home screen |
+### Teacher Control (admin panel)
+- Screen time limits
+- Manage apps (Kids list + Teacher list)
+- Bedtime schedule (reminder)
+- Usage information
+- Child profile & access codes
+- Change admin PIN
+- In-app update check (GitHub `version.json`)
 
 ---
 
-### 3. Start Kids Mode for the child
+## Requirements
 
-1. In Parent Control, tap **Start Kids Mode**.  
-2. (Optional) If asked, set **Kids Mode as the default Home app** → choose **Always**.  
-3. The child sees:
-   - School logo  
-   - “Kids Mode” and greeting  
-   - Allowed apps only  
-   - **Exit** + lock icon (top right) for parents only  
+| Item | Detail |
+|------|--------|
+| Platform | Android phone / tablet |
+| Language | Kotlin |
+| UI | Jetpack Compose + Material 3 |
+| Min SDK | As set in `app/build.gradle.kts` |
 
----
+**Important permissions**
+- **Usage Access** – required for Settings auto-return and usage stats  
+- **Default Home app** (optional) – lock tablet into Kids Mode as home  
 
-### 4. How the child uses it
-
-- Tap an app to open it.  
-- Press **Back** to return to Kids Mode.  
-- The system **Back** button does not leave Kids Mode.  
-- If Kids Mode is the default Home app, the **Home** button also returns to Kids Mode.
+On HONOR: if App info shows *“The app has been restricted”*, tap **Remove restriction** before enabling Usage Access.
 
 ---
 
-### 5. How the parent exits / opens settings
+## How to use (teachers)
 
-1. On the Kids Mode screen, tap **Exit** (or the lock icon) at the top right.  
-2. Enter the **4-digit Parent PIN** (once only).  
-3. **Parent Control** opens.  
-4. To leave the app completely:
-   - Tap **Back to Home Screen** → returns to the normal HONOR Home.  
-5. To go back to the child screen:
-   - Tap **Start Kids Mode**.
+### Start Kids Mode
+1. Open **Kids Mode** → Teacher Control  
+2. Tap **Start Kids Mode**  
+3. (Optional) Set as default Home when asked  
 
----
+Students only see apps enabled under **Manage Apps → Kids Mode apps**.
 
-### 6. Screen time & bedtime
+### Open Teacher Mode
+1. On Kids Mode, tap **Teacher** (top-left)  
+2. Enter the **Teacher Mode PIN**  
+3. Use teacher apps  
 
-- When the daily limit is reached → lock screen: **TIME’S UP**  
-- During bedtime → lock screen: **Bedtime**  
-- Parent unlocks with the same **4-digit PIN** and returns to Kids Mode.
+### Back to Kids Mode
+1. On Teacher Mode, tap **Kids Mode** (top-left)  
+2. No PIN required  
 
----
+### Manage apps
+1. Teacher Control → **Manage Apps**  
+2. Tab **Kids Mode apps** or **Teacher Mode apps**  
+3. Toggle apps On/Off  
+4. Optional: **Apply school app list**
 
-### 7. Recommended setup for school tablets
+### Change Teacher Mode PIN
+1. Teacher Control → **Settings**  
+2. **Teacher Mode PIN (from Kids Mode)**  
+3. Enter a new 4-digit PIN  
 
-1. Set child name (e.g. **Students**).  
-2. In **Manage Apps**, allow only school apps (Classroom, ClassDojo, etc.).  
-3. Set a suitable **Screen Time** limit.  
-4. Set **Bedtime** if needed.  
-5. Tap **Start Kids Mode**.  
-6. When asked, set Kids Mode as the **default Home app**.  
-7. Keep the Parent PIN private (teachers / IT only).
-
----
-
-### 8. Important notes
-
-- A normal app cannot lock the device as strongly as **HONOR Kids** (system app).  
-- For stronger lock: use Android **Screen pinning**, or set Kids Mode as default Home.  
-- Grant **Usage access** in Settings if you want accurate usage statistics.  
-- PIN is stored securely (hashed), not as plain text.
+### Exit codes
+Configured in **Settings** / **Change PIN** by school IT.  
+Do not share Exit or admin codes with students.
 
 ---
 
-### Quick parent checklist
+## Setup checklist (each tablet)
 
-1. Install app → create 4-digit PIN  
-2. Manage Apps → allow only needed apps  
-3. Set Screen Time / Bedtime  
-4. Start Kids Mode  
-5. (Optional) Set as default Home  
-6. Exit anytime with **Exit** + PIN  
-
----
-
-Developed by IT Team
+```text
+1. Install APK
+2. Open Teacher Control → Settings
+3. App Info / Permissions → Remove restriction (if shown)
+4. Open Usage Access Settings → Allow usage access = ON
+5. Manage Apps → set Kids + Teacher lists
+6. Start Kids Mode
