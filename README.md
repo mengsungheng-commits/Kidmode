@@ -23,6 +23,7 @@ Built for **Footprints International School** by the IT Team, with **Kotlin + Je
 - **Manage Apps:** choose which apps appear in Kids Mode and in Teacher Mode (search, allow all or none, one-tap school default list)
 - **Screen time:** daily limit and usage overview
 - **Bedtime:** set bedtime and wake-up times
+- **Permission pop-ups never block students:** when an app asks for the camera, microphone, location and so on, the pop-up opens normally. **Blocked screens** lists any other screen that sent a student home and lets you allow it with one tap
 - **PIN Management:** three separate, changeable PINs
   - Teacher Mode PIN (Kids Mode → Teacher Mode)
   - Exit to Home Screen PIN
