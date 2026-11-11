@@ -1,6 +1,6 @@
 {
-  "versionCode": 17,
-  "versionName": "1.0.17",
+  "versionCode": 23,
+  "versionName": "1.0.23",
   "apkUrl": "https://raw.githubusercontent.com/mengsungheng-commits/Kidmode/main/Kidsmode.apk",
   "notes": "Updated Teacher Mode PIN for all tablets",
   "teacherPin": "2025"
