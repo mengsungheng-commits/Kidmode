@@ -3,5 +3,7 @@
   "versionName": "1.0.24",
   "apkUrl": "https://raw.githubusercontent.com/mengsungheng-commits/Kidmode/main/Kidsmode.apk",
   "notes": "Automatic background update to v1.0.24",
-  "teacherPin": "2025"
+  "teacherPin": "2025",
+  "enabled": true,
+  "scheduledTime": ""
 }
